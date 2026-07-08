@@ -1,37 +1,23 @@
 <html>
 <head><meta charset="utf-8" /></head>
 <body>
-<button onclick="closeTab()" id="fixedBackButton">
-    ⬅ Quay lại báo cáo (Đóng tab)
+<button onclick="closeTab()" style="
+/* THÊM 3 DÒNG NÀY ĐỂ CHỈNH VỊ TRÍ */
+    position: fixed; 
+    bottom: 10px; 
+    right: 30px;
+padding: 15px 25px; font-size: 18px; cursor: pointer; background-color: #d9534f; color: white; border: none; border-radius: 8px; font-weight: bold;">
+    ⬅ BACK
 </button>
 
-<style>
-/* CSS ĐỂ ĐIỀU CHỈNH VỊ TRÍ VÀ KIỂU DÁNG NÚT */
-#fixedBackButton {
-    /* 1. CẤU HÌNH VỊ TRÍ CỐ ĐỊNH */
-    position: fixed;        /* Cố định nút trên màn hình */
-    
-    /* 2. ĐIỀU CHỈNH ĐỘ CAO (THẤP XUỐNG) */
-    bottom: 20px;          /* Cách cạnh dưới màn hình 20px (Tăng số này để cao hơn, giảm để thấp hơn) */
-    
-    /* 3. ĐIỀU CHỈNH VỊ TRÍ NGANG */
-    right: 20px;           /* Cách cạnh phải màn hình 20px */
-    
-    /* 4. ĐỘ ƯU TIÊN HIỂN THỊ */
-    z-index: 9999;          /* Đảm bảo nút luôn nằm trên biểu đồ (rất quan trọng) */
-    
-
-}
-
 <script>
-// LỆNH JavaScript ĐỂ ĐÓNG TAB VÀ QUAY VỀ PBI (DỰ PHÒNG)
 function closeTab() {
     // 1. Thử đóng tab hiện tại
     window.close();
     
-    // 2. Nếu trình duyệt chặn, chuyển hướng về trang PBI (Dự phòng)
-    // Bạn nhớ thay link Power BI của bạn vào đây:
-    window.location.href = "https://app.powerbi.com/groups/5539cefa-c9ba-4af8-8eb5-cfc73cd5bca8/reports/5dcaa920-784a-44c8-838a-83be1adb1ebc/32321223f6d1657981b6?experience=power-bi&bookmarkGuid=cf9ae874956afdf4faa8";
+    // 2. Nếu trình duyệt chặn không cho đóng, thì chuyển hướng về lại trang PBI
+    // Bạn thay link PBI của bạn vào đây:
+    window.location.href = "https://app.powerbi.com/groups/me/reports/https://app.powerbi.com/groups/5539cefa-c9ba-4af8-8eb5-cfc73cd5bca8/reports/5dcaa920-784a-44c8-838a-83be1adb1ebc/32321223f6d1657981b6?experience=power-bi&bookmarkGuid=cf9ae874956afdf4faa8";
 }
 </script>
     <div style="height:100%; width:100%;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
